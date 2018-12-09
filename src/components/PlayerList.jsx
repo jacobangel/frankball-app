@@ -1,5 +1,6 @@
 import React from 'react';
 import { Player } from './Player';
+import './PlayerList.css';
 
 const sortPlayers = (players) => {
   const inP = [];
@@ -28,6 +29,14 @@ export const PlayerList = (props) => {
       </header>
       <section>
         <ol>
+          <li>
+            <span className="field"></span>
+            <span className="field">Name</span>
+            <span className="field">Time on Field</span>
+            <span className="field">Goals</span>
+            <span className="field">Assists</span>
+            <span className="field">In Play?</span>
+          </li>
         {inPlayers.map((playerProps, i) => {
           return <li key={playerProps.id}><Player {...playerProps} /></li>
         })}

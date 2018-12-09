@@ -5,6 +5,8 @@ import { Provider } from "react-redux";
 import store from "./state/store";
 
 import { HashRouter as Router, Route, Link } from "react-router-dom";
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
 import { PlayerPanel } from './containers/PlayerPanel';
 import { FormationPanel } from './containers/FormationPanel';
 import { GameOverview } from './containers/GameOverview';
@@ -16,6 +18,7 @@ class App extends Component {
         <Router>
           <div className="App">
             <header className="App-header">
+              <Header />
             </header>
             <div className="App-sidebar">
             <nav className="App-nav">
@@ -36,7 +39,7 @@ class App extends Component {
               <GameOverview />
             </section>
             <footer className="App-footer">
-              Footer stuff
+              <Footer />
             </footer>
           </div>
         </Router>

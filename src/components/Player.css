@@ -1,0 +1,24 @@
+
+.Player {
+
+}
+
+.Player .field {
+  display: inline-block;
+  padding: .2rem .5rem;
+}
+
+.Player .icon {
+  display: inline-block;
+  background: #ddd;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.Player .icon-inner {
+  vertical-align: middle;
+  line-height: 2rem;
+}

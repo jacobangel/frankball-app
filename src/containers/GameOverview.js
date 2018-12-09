@@ -4,10 +4,12 @@ import Field from '../imgs/field.svg';
 
 export const GameOverview = (props) => {
   return (
-    <article>
+    <article className="GameOverview">
       <div>
         <h1>Game!</h1>
-        <img src={Field} />
+        <div className="Field">
+          <img src={Field} />
+        </div>
       </div>
       <div>
         <Dashboard />
