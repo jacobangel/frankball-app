@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Field from './imgs/field.svg';
 
 import { Provider } from "react-redux";
 import store from "./state/store";
@@ -9,6 +7,7 @@ import store from "./state/store";
 import { HashRouter as Router, Route, Link } from "react-router-dom";
 import { PlayerPanel } from './containers/PlayerPanel';
 import { FormationPanel } from './containers/FormationPanel';
+import { GameOverview } from './containers/GameOverview';
 
 class App extends Component {
   render() {
@@ -34,11 +33,7 @@ class App extends Component {
             </div>
 
             <section className="App-body">
-              <div>
-                <h1>Game!</h1>
-                <img src={Field} />
-              </div>
-              <div>Dashboard</div>
+              <GameOverview />
             </section>
             <footer className="App-footer">
               Footer stuff

@@ -18,21 +18,30 @@ export const Player = (props) => {
     id,
     timePlayed,
     src,
-    onAddGoal
+    onUpdateAssist,
+    onUpdateGoal,
   } = props;
 
   return (
     <article key={id}>
       <Icon initial={name[0] || 'U'} src={src} />
-      <span>{name}</span>
-      <span>{timePlayed}</span>
-      <span>
-        <button onClick={onAddGoal}>+</button>
+      <span className="field">{name}</span>
+      <span className="field">{timePlayed}</span>
+      <span className="field">
+        <button onClick={() => { onUpdateGoal(+1) }}>+</button>
+        /
+        <button onClick={() => { onUpdateGoal(-1) }}>-</button>
+      </span>
+      <span className="field">
+        <button onClick={() => { onUpdateAssist(+1) }}>+</button>
+        /
+        <button onClick={() => { onUpdateAssist(-1) }}>-</button>
       </span>
     </article>
   );
 }
 
 Player.defaultProps = {
-  onAddGoal: () => { console.log('onAddGoal'); },
+  onUpdateGoal: () => { console.log('onUpdateGoal'); },
+  onUpdateAssist: () => { console.log('onUpdateAssist'); },
 }
